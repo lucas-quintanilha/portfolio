@@ -1,0 +1,286 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Suaviza o scroll ao clicar nos links */
+}
+
+/* Cabeçalho fixo com transparência e animação de desvanecimento */
+header {
+    background-color: rgba(40, 44, 52); /* Semitransparente */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out; /* Animação suave de transição de cor */
+}
+
+.logo {
+    width: auto;
+    height: 40px;
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: rgba(40, 44, 52);
+    background-color: #ffffff;
+    transform: scale(1.1); /* Aumenta ligeiramente ao passar o mouse */
+}
+
+/* Estilo principal para o conteúdo */
+main {
+    margin-top: 80px; /* Espaço para o cabeçalho fixo */
+    padding: 20px;
+}
+
+/* Seção Home */
+.home {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in; /* Animação de entrada suave */
+}
+
+.home h1 {
+    font-size: 2.5em;
+    color: #282c34;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Seções Alternadas */
+section:nth-of-type(even) {
+    background-color: #f0f0f0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.contato {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in; /* Animação de entrada suave */
+}
+
+.contato h1 {
+    font-size: 2.5em;
+    color: #282c34;
+    margin-bottom: 30px;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-form {
+    text-align: left;
+}
+
+.grupo-form label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.grupo-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.grupo-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.grupo-form textarea {
+    resize: vertical; /* Permite redimensionamento vertical */
+}
+
+.botao-enviar {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: rgba(40, 44, 52);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-enviar:hover {
+    color: #ffffff;
+    background-color: rgb(89, 110, 151);
+}
+
+/* Estilos para a seção de Sobre Mim */
+
+.sobre {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1s ease-in; /* Animação de entrada suave */
+}
+
+.sobre h1 {
+    font-size: 2.5em;
+    color: #282c34;
+    margin-bottom: 30px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-detalhes h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sobre-detalhes p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Estilos para a seção de Formação */
+.formacao {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1s ease-in; /* Animação de entrada suave */
+}
+
+.formacao h1 {
+    font-size: 2.5em;
+    color: #282c34;
+    margin-bottom: 30px;
+}
+
+.formacao-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: left; /* Alinha o texto à esquerda para itens */
+}
+
+.formacao-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.formacao-detalhes h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.formacao-detalhes p {
+    font-size: 1.2em;
+    color: #666;
+}
